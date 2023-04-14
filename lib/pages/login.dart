@@ -1,7 +1,7 @@
-import 'package:yemek_uygulama/services/auth.dart';
-import 'package:yemek_uygulama/main.dart';
-import 'package:flutter/material.dart';
+import 'package:yemek_uygulama/service/auth.dart';
 import 'package:yemek_uygulama/pages/pages.dart';
+import 'package:yemek_uygulama/pages/register.dart';
+import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -131,6 +131,33 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(
                         height: size.height * 0.02,
                       ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => RegisterPage()));
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              height: 1,
+                              width: 75,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              "Kayıt ol",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Container(
+                              height: 1,
+                              width: 75,
+                              color: Colors.white,
+                            ),
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
